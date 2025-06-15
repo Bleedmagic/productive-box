@@ -118,6 +118,8 @@ interface Edge {
     return [...prev, line.join(' ')];
   }, [] as string[]);
 
+  lines.push('🤖 by productive-box (maxam2017)');
+
   /**
    * Finally, write into gist
    */
