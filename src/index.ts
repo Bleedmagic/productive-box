@@ -118,8 +118,6 @@ interface Edge {
     return [...prev, line.join(' ')];
   }, [] as string[]);
 
-  lines.push('🤖 by [productive-box](https://github.com/maxam2017/productive-box/)');
-
   /**
    * Finally, write into gist
    */
