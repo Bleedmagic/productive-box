@@ -134,15 +134,12 @@ interface Edge {
     return;
   }
 
-  const oldFilename = Object.keys(gist.data.files)[0];
-  const newFilename =
-    morning + daytime > evening + night ? 'I am an early bird! 🐤' : 'I am a night owl! 🦉';
-
+  const filename = Object.keys(gist.data.files)[0];
   await octokit.gists.update({
     gist_id: `${process.env.GIST_ID}`,
     files: {
-      [oldFilename]: {
-        filename: newFilename,
+      [filename]: {
+        filename: morning + daytime > evening + night ? "I'm an early 🐤" : "I'm a night 🦉",
         content: lines.join('\n'),
       },
     },
